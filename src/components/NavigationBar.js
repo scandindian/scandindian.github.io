@@ -1,14 +1,22 @@
 import React from 'react';
+import '../css/NavigationBar.css';
 
 const NavigationBar = () => {
     return (
-        <div class="ui top fixed menu">
-            <a class="item">Home</a>
-            <div class="right menu">
-                <a class="item">Resume</a>
-                <a class="item">About</a>
-                <a class="item">Photography</a>
-                <a class="item">Contact</a>
+        <div className="navigation-bar">
+            <div id="desktop-navigation-bar" className="ui top fixed text menu">
+                <a className="item">Home</a>
+                <div className="right menu">
+                    <a className="item">About</a>
+                    <a className="item">Photos</a>
+                    <a className="item">Contact</a>
+                </div>
+            </div>
+            <div id="mobile-navigation-bar" className="ui top fixed four item text menu">
+                <a className="item">Home</a>
+                <a className="item">About</a>
+                <a className="item">Photos</a>
+                <a className="item">Contact</a>
             </div>
         </div>
     );

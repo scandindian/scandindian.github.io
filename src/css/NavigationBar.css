@@ -1,0 +1,22 @@
+#desktop-navigation-bar {
+    background: white;
+    padding: 40px;
+    font-size: medium;
+}
+
+#mobile-navigation-bar {
+    background: white;
+    padding: 20px;
+}
+
+@media screen and (max-width: 480px) {
+    #desktop-navigation-bar {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    #mobile-navigation-bar {
+        display: none;
+    }
+}
