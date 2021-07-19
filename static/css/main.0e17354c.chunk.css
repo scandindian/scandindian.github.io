@@ -1,0 +1,2 @@
+#desktop-navigation-bar{background:#fff;padding:40px;font-size:medium}#mobile-navigation-bar{background:#fff;padding:20px}@media screen and (max-width:480px){#desktop-navigation-bar{display:none}}@media screen and (min-width:480px){#mobile-navigation-bar{display:none}}#home-container{height:100vh;width:100%;padding-top:70px;margin:0}.name-heading{margin:0;font-size:clamp(40px,8vw,80px)}.short-description{margin:20px 0 40px}
+/*# sourceMappingURL=main.0e17354c.chunk.css.map */
