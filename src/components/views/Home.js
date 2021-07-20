@@ -13,9 +13,7 @@ const Home = () => {
                         <p className="short-description">
                             I am a full stack software developer with a focus on frontend, currently based in Tokyo. 
                             <br />
-                            I specialize in developing apps using ReactJS and Redux along with other technologies.
-                            <br />
-                            See my résumé to know more about me.
+                            I specialize in developing web apps using ReactJS and Redux along with other technologies.
                         </p>
                         <a id="resume-button" href={Resume} target="_blank" className="ui button">Résumé</a>
                     </div>
