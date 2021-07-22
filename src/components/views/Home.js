@@ -15,7 +15,7 @@ const Home = () => {
                             <br />
                             I specialize in developing web apps using ReactJS and Redux along with other technologies.
                         </p>
-                        <a id="resume-button" href={Resume} target="_blank" className="ui button">Résumé</a>
+                        <a id="resume-button" href={Resume} target="_blank" rel="noopener noreferrer" className="ui button">Résumé</a>
                     </div>
                 </div>
             </div>
