@@ -4,11 +4,13 @@ import "../../css/About.css";
 
 const About = () => {
     return (
-        <div className="row">
-            <div className="column">
-                <div className="ui vertical segment">
-                    <p className="about-info">
-                        Thank you for visiting my profile page. My name is Varun Kumar and I am from India.
+        <div className="ui container">
+            <div id="app-container" className="ui grid middle aligned">
+                <div className="row">
+                    <div className="column">
+                        <div className="ui vertical segment">
+                            <p className="about-info">
+                                Thank you for visiting my profile page. My name is Varun Kumar and I am from India.
                     <br /><br />
                     Currently, I am working at <a href="https://www.jig-saw.com/en/" target="_blank" rel="noopener noreferrer">JIG-SAW</a> in Tokyo, Japan.
                     I moved here in 2019 after graduating with a masters degree in information technology from <a href="https://iiita.ac.in/" target="_blank" rel="noopener noreferrer">IIIT Allahabad</a>.
@@ -24,6 +26,8 @@ const About = () => {
                     <br /><br />
                     Feel free to <Link to="/contact">connect</Link> with me or see my <a id="resume-button" href="/Resume.pdf" target="_blank" rel="noopener noreferrer">résumé</a>. I am looking forward to hearing from you.
                     </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
