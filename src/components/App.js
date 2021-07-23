@@ -9,7 +9,7 @@ import "../css/App.css";
 const App = () => {
     return (
         <Router>
-            <NavigationBar />
+            <NavigationBar basename={process.env.PUBLIC_URL}/>
             <Switch>
                 <div className="ui container">
                     <div id="app-container" className="ui grid middle aligned">
