@@ -4,11 +4,13 @@ import Home from "./views/Home";
 import About from "./views/About";
 import Contact from "./views/Contact";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { createBrowserHistory } from "history";
 import "../css/App.css";
 
 const App = () => {
+    const history = createBrowserHistory();
     return (
-        <Router basename={process.env.PUBLIC_URL}>
+        <Router history={history}>
             <NavigationBar/>
             <Switch>
                 <div className="ui container">
