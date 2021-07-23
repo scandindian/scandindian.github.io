@@ -1,11 +1,12 @@
 #desktop-navigation-bar {
     background: white;
+    font-size: clamp(15px, 2vw, 18px);
     padding: 40px;
-    font-size: medium;
 }
 
 #mobile-navigation-bar {
     background: white;
+    font-size: clamp(15px, 2vw, 18px);
     padding: 20px;
 }
 
@@ -18,5 +19,6 @@
 @media screen and (min-width: 480px) {
     #mobile-navigation-bar {
         display: none;
+        position: fixed;
     }
 }

@@ -1,22 +1,19 @@
-import React from 'react';
-import Resume from '../../documents/Resume.pdf';
-import '../../css/Home.css';
+import React from "react";
+import "../../css/Home.css";
 
 const Home = () => {
     return (
-        <div id="home-container" className="ui grid middle aligned">
-            <div className="row">
-                <div className="eleven wide column">
-                    <div className="ui vertical segment">
-                        <h3 className>Hello, my name is</h3>
-                        <h1 className="name-heading">Varun Kumar</h1>
-                        <p className="short-description">
-                            I am a full stack software developer with a focus on frontend, currently based in Tokyo. 
+        <div className="row">
+            <div className="sixteen wide column">
+                <div className="ui vertical segment">
+                    <p className="home-greeting"><b>Hello, my name is</b></p>
+                    <h1 className="home-heading">Varun Kumar</h1>
+                    <p className="home-description">
+                        I am a full stack software developer with a focus on frontend, currently based in Tokyo.
                             <br />
-                            I specialize in developing web apps using ReactJS and Redux along with other technologies.
-                        </p>
-                        <a id="resume-button" href={Resume} target="_blank" rel="noopener noreferrer" className="ui button">Résumé</a>
-                    </div>
+                        I specialize in developing web apps using ReactJS and Redux, along with other technologies.
+                    </p>
+                    <a id="resume-button" href="/Resume.pdf" target="_blank" rel="noopener noreferrer" className="large ui grey basic button">Résumé</a>
                 </div>
             </div>
         </div>

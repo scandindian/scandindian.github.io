@@ -1,0 +1,4 @@
+.contact-info {
+    font-size: clamp(15px, 2vw, 18px);
+    padding: 20px 0px 20px 0px;
+}

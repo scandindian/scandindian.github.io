@@ -1,15 +1,13 @@
-#home-container {
-    height: 100vh;
-    width: 100%;
-    padding-top: 70px;
-    margin: 0px;
+.home-greeting {
+    font-size: clamp(15px, 2vw, 18px);
 }
 
-.name-heading {
+.home-heading {
     margin: 0px;
-    font-size: clamp(20px, 8vw, 80px);
+    font-size: clamp(30px, 8vw, 100px);
 }
 
-.short-description {
+.home-description {
     margin: 20px 0px 40px 0px;
+    font-size: clamp(15px, 2vw, 18px);
 }

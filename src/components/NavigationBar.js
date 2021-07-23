@@ -1,22 +1,24 @@
-import React from 'react';
-import '../css/NavigationBar.css';
+import React from "react";
+import "../css/NavigationBar.css";
+import { Link } from "react-router-dom";
+
 
 const NavigationBar = () => {
     return (
-        <div className="navigation-bar">
+        <React.Fragment>
             <div id="desktop-navigation-bar" className="ui top fixed text menu">
-                <a className="item">Home</a>
+                <Link to="/" className="item">Home</Link>
                 <div className="right menu">
-                    <a className="item">Photos</a>
-                    <a className="item">Contact</a>
+                    <Link to="/about" className="item">About</Link>
+                    <Link to="/contact" className="item">Contact</Link>
                 </div>
             </div>
             <div id="mobile-navigation-bar" className="ui top fixed four item text menu">
-                <a className="item">Home</a>
-                <a className="item">Photos</a>
-                <a className="item">Contact</a>
+                <Link to="/" className="item">Home</Link>
+                <Link to="/about" className="item">About</Link>
+                <Link to="/contact" className="item">Contact</Link>
             </div>
-        </div>
+        </React.Fragment>
     );
 };
 
