@@ -12,9 +12,9 @@ const Home = () => {
                             <h1 className="home-heading">Varun Kumar</h1>
                             <p className="home-description">
                                 I am a full stack software developer with a focus on frontend, currently based in Tokyo.
-                            <br />
-                        I specialize in developing web apps using ReactJS and Redux, along with other technologies.
-                    </p>
+                                <br />
+                                I specialize in developing web apps using ReactJS and Redux.
+                            </p>
                             <a id="resume-button" href="/Resume.pdf" target="_blank" rel="noopener noreferrer" className="large ui grey basic button">Résumé</a>
                         </div>
                     </div>
