@@ -8,8 +8,8 @@ import "../css/App.css";
 
 const App = () => {
     return (
-        <Router>
-            <NavigationBar basename={process.env.PUBLIC_URL}/>
+        <Router basename={process.env.PUBLIC_URL}>
+            <NavigationBar/>
             <Switch>
                 <div className="ui container">
                     <div id="app-container" className="ui grid middle aligned">
