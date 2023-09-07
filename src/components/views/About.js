@@ -10,8 +10,8 @@ const About = () => {
                     <div className="column">
                         <div className="ui vertical segment">
                             <p className="about-info">
-                                Thank you for visiting my profile website. Currently, I am working at <a href="https://www.xeneta.com/" target="_blank" rel="noopener noreferrer">Xeneta</a>.
-                                I moved to Japan from India in 2019 after graduating with a masters degree in information technology from <a href="https://iiita.ac.in/" target="_blank" rel="noopener noreferrer">IIIT Allahabad</a>. Currently, I live in Norway.
+                                Thank you for visiting my profile website. Currently, I am working at <a href="https://www.xeneta.com/" target="_blank" rel="noopener noreferrer">Xeneta</a>, based in Oslo.
+                                I moved to Japan from India in 2019 after graduating with a masters degree in information technology from <a href="https://iiita.ac.in/" target="_blank" rel="noopener noreferrer">IIIT Allahabad</a>.
                                 <br /><br />
                                 During my college summer vacations, I worked
                                 at <a href="https://www.itri.org.tw/english/" target="_blank" rel="noopener noreferrer">ITRI</a> in Taiwan and <a href="https://www.gist.ac.kr/en/main.html" target="_blank" rel="noopener noreferrer">GIST</a> in South Korea as an intern.

@@ -11,7 +11,7 @@ const Home = () => {
                             <p className="home-greeting"><b>Hello, my name is</b></p>
                             <h1 className="home-heading">Varun Kumar</h1>
                             <p className="home-description">
-                                I am a software developer with a focus on frontend, currently based in Tokyo.
+                                I am a software developer with a focus on frontend, currently based in Oslo.
                                 <br />
                                 I specialize in developing web apps using ReactJS and Redux.
                             </p>
