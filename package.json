@@ -17,7 +17,7 @@
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d --openssl-legacy-provider build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts --openssl-legacy-provider build && cp build/index.html build/404.html",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
