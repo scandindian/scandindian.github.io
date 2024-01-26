@@ -13,7 +13,6 @@ const Home = () => {
                             <p className="home-description">
                                 I am a software developer with a focus on frontend, currently based in Oslo.
                                 <br />
-                                I specialize in developing web apps using ReactJS and Redux.
                             </p>
                             <a id="resume-button" href="/Resume.pdf" target="_blank" rel="noopener noreferrer" className="large ui grey basic button">Résumé</a>
                         </div>
