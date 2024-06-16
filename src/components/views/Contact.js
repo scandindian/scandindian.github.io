@@ -8,7 +8,7 @@ const Contact = () => {
                 <div className="row">
                     <div className="column">
                         <div className="ui vertical segment">
-                            <p className="contact-info">You can email me at <b>heysadboy@gmail.com</b></p>
+                            <p className="contact-info">You can email me at <b>varun.scandindian@gmail.com</b></p>
                             <a className="large ui grey basic ui button" href="https://www.linkedin.com/in/heysadboy" target="_blank" rel="noopener noreferrer">
                                 <i className="linkedin icon" />
                         LinkedIn
