@@ -9,11 +9,11 @@ const Contact = () => {
                     <div className="column">
                         <div className="ui vertical segment">
                             <p className="contact-info">You can email me at <b>varun.scandindian@gmail.com</b></p>
-                            <a className="large ui grey basic ui button" href="https://www.linkedin.com/in/heysadboy" target="_blank" rel="noopener noreferrer">
+                            <a className="large ui grey basic ui button" href="https://www.linkedin.com/in/scandindian" target="_blank" rel="noopener noreferrer">
                                 <i className="linkedin icon" />
                         LinkedIn
                     </a>
-                            <a className="large ui grey basic ui button" href="https://github.com/heysadboy" target="_blank" rel="noopener noreferrer">
+                            <a className="large ui grey basic ui button" href="https://github.com/scandindian" target="_blank" rel="noopener noreferrer">
                                 <i className="github icon" />
                         GitHub
                     </a>
