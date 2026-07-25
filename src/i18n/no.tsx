@@ -12,7 +12,7 @@ const no: Content = {
         greeting: "Hei",
         eyebrow: "Programvareutvikler",
         rolePrefix: "Jeg er",
-        roles: ["frontendutvikler", "datavisualiseringsingeniør", "full-stack problemløser"],
+        roles: ["frontendutvikler", "datavisualiseringsingeniør", "produktingeniør", "full-stack problemløser"],
         tagline: (
             <>
                 Programvareutvikler med <strong>7+ års</strong> erfaring med å bygge skalerbare,

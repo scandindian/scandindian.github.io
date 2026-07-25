@@ -6,9 +6,8 @@ import {
     staggerContainer,
     gridContainer,
     fadeUpItem,
-    slideInLeft,
+    fadeInItem,
     scaleInItem,
-    revealViewport,
 } from "../../lib/animations";
 import { useContent } from "../../i18n/LanguageProvider";
 import "../../css/About.css";
@@ -59,25 +58,13 @@ const About = () => {
                 </div>
 
                 {/* Experience timeline */}
-                <motion.h2
-                    className="about__section-title"
-                    initial="hidden"
-                    whileInView="show"
-                    viewport={revealViewport}
-                    variants={fadeUpItem}
-                >
+                <motion.h2 className="about__section-title" variants={fadeUpItem}>
                     {a.experienceTitle}
                 </motion.h2>
 
-                <motion.ol
-                    className="timeline"
-                    initial="hidden"
-                    whileInView="show"
-                    viewport={revealViewport}
-                    variants={staggerContainer}
-                >
+                <motion.ol className="timeline" variants={staggerContainer}>
                     {a.experiences.map((exp) => (
-                        <motion.li className="timeline__item" key={exp.company} variants={slideInLeft}>
+                        <motion.li className="timeline__item" key={exp.company} variants={fadeInItem}>
                             <span className="timeline__dot" />
                             <div className="timeline__head">
                                 <h3 className="timeline__role">
@@ -101,13 +88,7 @@ const About = () => {
                 </motion.ol>
 
                 {/* Skills */}
-                <motion.h2
-                    className="about__section-title"
-                    initial="hidden"
-                    whileInView="show"
-                    viewport={revealViewport}
-                    variants={fadeUpItem}
-                >
+                <motion.h2 className="about__section-title" variants={fadeUpItem}>
                     {a.toolboxTitle}
                 </motion.h2>
 
@@ -116,9 +97,6 @@ const About = () => {
                         <motion.div
                             className="skills__group"
                             key={group.label}
-                            initial="hidden"
-                            whileInView="show"
-                            viewport={revealViewport}
                             variants={gridContainer}
                         >
                             <motion.span className="skills__label" variants={fadeUpItem}>
@@ -141,23 +119,11 @@ const About = () => {
                 </div>
 
                 {/* Personal note */}
-                <motion.p
-                    className="about__note"
-                    initial="hidden"
-                    whileInView="show"
-                    viewport={revealViewport}
-                    variants={fadeUpItem}
-                >
+                <motion.p className="about__note" variants={fadeUpItem}>
                     {a.note}
                 </motion.p>
 
-                <motion.div
-                    className="about__actions"
-                    initial="hidden"
-                    whileInView="show"
-                    viewport={revealViewport}
-                    variants={fadeUpItem}
-                >
+                <motion.div className="about__actions" variants={fadeUpItem}>
                     <MagneticButton primary to="/contact">
                         {a.connect} <span className="btn__arrow">→</span>
                     </MagneticButton>

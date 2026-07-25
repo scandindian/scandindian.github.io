@@ -52,7 +52,10 @@ body {
     font-family: var(--font-body);
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
-    overflow-x: hidden;
+    /* `clip` (not `hidden`) stops horizontal overflow WITHOUT turning body into a
+       vertical scroll container — otherwise the page scrolls inside <body> and
+       window.scrollTo(0,0) on route change can't reach it. */
+    overflow-x: clip;
 }
 
 #root {
@@ -335,6 +338,7 @@ a:hover {
 .lang {
     display: inline-flex;
     align-items: center;
+    gap: 12px;
     font-family: var(--font-display);
     font-size: 15px;
     font-weight: 500;
@@ -343,7 +347,7 @@ a:hover {
 .lang__item {
     display: inline-flex;
     align-items: center;
-    gap: 9px;
+    gap: 12px;
 }
 
 .lang__opt {
@@ -367,10 +371,10 @@ a:hover {
 }
 
 .lang__sep {
-    width: 1px;
-    height: 13px;
-    background: var(--border-strong);
-    transform: rotate(16deg);
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: var(--faint);
 }
 
 @media (prefers-reduced-motion: reduce) {

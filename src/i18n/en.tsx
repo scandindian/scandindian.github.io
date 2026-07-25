@@ -12,7 +12,7 @@ const en: Content = {
         greeting: "Hello",
         eyebrow: "Software developer",
         rolePrefix: "I'm a",
-        roles: ["frontend developer", "data-visualisation engineer", "full-stack problem-solver"],
+        roles: ["frontend developer", "data-visualisation engineer", "product engineer", "full-stack problem-solver"],
         tagline: (
             <>
                 Software developer with <strong>7+ years</strong> building scalable,
