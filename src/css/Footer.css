@@ -1,0 +1,33 @@
+.footer {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 14px;
+    padding: 22px clamp(20px, 6vw, 80px);
+    border-top: 1px solid var(--border);
+    font-family: var(--font-display);
+    font-size: 13px;
+    color: var(--faint);
+}
+
+.footer__copy {
+    margin: 0;
+    letter-spacing: 0.02em;
+}
+
+.footer__links {
+    display: flex;
+    gap: 22px;
+}
+
+.footer__links a {
+    color: var(--muted);
+    transition: color 0.4s ease;
+}
+
+.footer__links a:hover {
+    color: var(--teal);
+}
