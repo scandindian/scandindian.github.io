@@ -1,13 +1,103 @@
-.home-greeting {
-    font-size: clamp(15px, 2vw, 18px);
+.page--hero {
+    padding: calc(var(--nav-height) + 48px) clamp(22px, 6vw, 96px) 80px;
 }
 
-.home-heading {
-    margin: 0px;
-    font-size: clamp(30px, 8vw, 100px);
+.hero {
+    width: min(1280px, 100%);
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: clamp(20px, 5vw, 70px);
 }
 
-.home-description {
-    margin: 20px 0px 40px 0px;
-    font-size: clamp(15px, 2vw, 18px);
+@media (min-width: 940px) {
+    .hero {
+        grid-template-columns: 1.15fr 0.85fr;
+    }
+}
+
+/* ---- text column ---- */
+.hero__main {
+    max-width: 640px;
+}
+
+.hero__eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 20px;
+    font-family: var(--font-display);
+    font-size: clamp(12px, 1.4vw, 14px);
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--muted);
+}
+
+.hero__eyebrow-line {
+    display: inline-block;
+    width: 40px;
+    height: 1px;
+    background: linear-gradient(90deg, var(--teal), transparent);
+}
+
+.hero__name {
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: 700;
+    line-height: 0.98;
+    font-size: clamp(46px, 8.5vw, 118px);
+    letter-spacing: -0.03em;
+    overflow-wrap: break-word;
+}
+
+.hero__role {
+    margin: 18px 0 0;
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: clamp(19px, 2.6vw, 30px);
+    color: var(--text);
+    min-height: 1.4em;
+}
+
+.rotating-role-wrap {
+    display: inline-block;
+    position: relative;
+}
+
+.rotating-role {
+    display: inline-block;
+    color: var(--teal);
+}
+
+.hero__tagline {
+    margin: 26px 0 38px;
+    max-width: 52ch;
+    font-size: clamp(16px, 1.7vw, 19px);
+    line-height: 1.85;
+    font-weight: 300;
+    color: var(--muted);
+}
+
+.hero__tagline strong { color: var(--text); font-weight: 500; }
+
+.hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+/* ---- orb column ---- */
+.hero__orb {
+    justify-self: center;
+    width: min(78vw, 460px);
+}
+
+@media (max-width: 939px) {
+    .hero {
+        grid-auto-flow: row;
+    }
+    .hero__orb {
+        order: -1;
+        width: min(62vw, 320px);
+    }
 }

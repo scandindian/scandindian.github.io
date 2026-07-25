@@ -1,0 +1,29 @@
+.logo {
+    display: block;
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    background:
+        radial-gradient(circle at 36% 32%, rgba(255, 255, 255, 0.65), transparent 46%),
+        radial-gradient(circle at 44% 42%, var(--teal), var(--blue) 62%, var(--violet) 100%);
+    border-radius: 42% 58% 63% 37% / 45% 45% 55% 55%;
+    box-shadow: 0 0 12px rgba(94, 234, 212, 0.45);
+    animation: logo-morph 15s ease-in-out infinite, logo-spin 34s linear infinite;
+}
+
+@keyframes logo-morph {
+    0%, 100% { border-radius: 42% 58% 63% 37% / 45% 45% 55% 55%; }
+    25% { border-radius: 62% 38% 42% 58% / 58% 46% 54% 42%; }
+    50% { border-radius: 50% 50% 55% 45% / 40% 60% 40% 60%; }
+    75% { border-radius: 44% 56% 48% 52% / 52% 42% 58% 48%; }
+}
+
+@keyframes logo-spin {
+    to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .logo {
+        animation: none;
+    }
+}

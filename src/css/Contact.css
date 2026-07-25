@@ -1,4 +1,99 @@
-.contact-info {
-    font-size: clamp(15px, 2vw, 18px);
-    padding: 20px 0px 20px 0px;
+.contact {
+    width: min(640px, 100%);
+    padding: clamp(34px, 5vw, 60px);
+    text-align: center;
+}
+
+.contact__orb-wrap {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 26px;
+}
+
+.contact__orb {
+    width: clamp(96px, 16vw, 140px);
+}
+
+.contact__greeting {
+    margin: 0 0 14px;
+    font-size: clamp(11px, 1.4vw, 13px);
+}
+
+.contact__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 16px;
+    font-family: var(--font-display);
+    font-size: clamp(12px, 1.4vw, 14px);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+}
+
+.contact__eyebrow-line {
+    display: inline-block;
+    width: 40px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--teal));
+}
+
+.contact__title {
+    margin: 0 0 20px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    font-size: clamp(28px, 5vw, 48px);
+}
+
+.contact__info {
+    margin: 0 0 24px;
+    font-size: clamp(15px, 1.8vw, 18px);
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--muted);
+}
+
+.contact__email {
+    display: inline-block;
+    margin: 0 0 18px;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(18px, 2.6vw, 26px);
+    color: var(--text);
+    border-bottom: 1px solid var(--border-strong);
+    padding-bottom: 4px;
+    transition: color 0.25s ease, border-color 0.25s ease;
+}
+
+.contact__email:hover {
+    color: var(--teal);
+    border-color: var(--teal);
+}
+
+.contact__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 34px;
+    font-size: clamp(14px, 1.6vw, 16px);
+    font-weight: 300;
+    color: var(--muted);
+}
+
+.contact__dot {
+    color: var(--faint);
+}
+
+.contact__socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+}
+
+.contact__socials .icon {
+    margin: 0;
 }
