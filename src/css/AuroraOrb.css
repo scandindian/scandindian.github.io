@@ -18,7 +18,22 @@
         0 0 90px rgba(56, 189, 248, 0.30),
         0 0 160px rgba(94, 234, 212, 0.16);
     border-radius: 42% 58% 63% 37% / 45% 45% 55% 55%;
-    animation: blob-morph 16s ease-in-out infinite, blob-spin 46s linear infinite;
+    animation: blob-morph 16s ease-in-out infinite;
+    /* Force this clip onto its own compositing layer so iOS Safari applies the
+       rounded overflow clip to transformed/animated descendants (otherwise the
+       aurora's square bounding box leaks out behind the orb). */
+    transform: translateZ(0);
+    will-change: transform;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/* inner layer carries the rotation so the clipping element above stays
+   untransformed and keeps compositing the rounded clip */
+.orb__spin {
+    position: absolute;
+    inset: 0;
+    animation: blob-spin 46s linear infinite;
 }
 
 @keyframes blob-morph {
@@ -107,6 +122,7 @@
 
 @media (prefers-reduced-motion: reduce) {
     .orb__blob-shape,
+    .orb__spin,
     .orb__aurora,
     .orb__blob {
         animation: none !important;
