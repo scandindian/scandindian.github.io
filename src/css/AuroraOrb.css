@@ -19,17 +19,25 @@
         0 0 160px rgba(94, 234, 212, 0.16);
     border-radius: 42% 58% 63% 37% / 45% 45% 55% 55%;
     animation: blob-morph 16s ease-in-out infinite;
-    /* Force this clip onto its own compositing layer so iOS Safari applies the
-       rounded overflow clip to transformed/animated descendants (otherwise the
-       aurora's square bounding box leaks out behind the orb). */
-    transform: translateZ(0);
-    will-change: transform;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
 }
 
-/* inner layer carries the rotation so the clipping element above stays
-   untransformed and keeps compositing the rounded clip */
+/* The clip layer. iOS Safari does NOT apply an `overflow: hidden` +
+   `border-radius` clip to descendants that live on their own compositing
+   layer (transforms, filter: blur, mix-blend-mode) — so the aurora's square,
+   blurred bounding box leaks out from behind the orb. `clip-path` *does* clip
+   composited descendants reliably, and inset(... round ...) follows the same
+   morphing radius. It lives on its own element (not .orb__blob-shape) so it
+   never clips that element's outer glow box-shadow. */
+.orb__clip {
+    position: absolute;
+    inset: 0;
+    -webkit-clip-path: inset(0 round 42% 58% 63% 37% / 45% 45% 55% 55%);
+    clip-path: inset(0 round 42% 58% 63% 37% / 45% 45% 55% 55%);
+    animation: blob-clip 16s ease-in-out infinite;
+}
+
+/* inner layer carries the rotation so the clip layer above stays untransformed
+   and keeps clipping to the fixed (morphing) blob outline */
 .orb__spin {
     position: absolute;
     inset: 0;
@@ -41,6 +49,26 @@
     25% { border-radius: 62% 38% 42% 58% / 58% 46% 54% 42%; }
     50% { border-radius: 50% 50% 55% 45% / 40% 60% 40% 60%; }
     75% { border-radius: 44% 56% 48% 52% / 52% 42% 58% 48%; }
+}
+
+/* kept in lockstep with blob-morph so the clip tracks the visible edge */
+@keyframes blob-clip {
+    0%, 100% {
+        -webkit-clip-path: inset(0 round 42% 58% 63% 37% / 45% 45% 55% 55%);
+        clip-path: inset(0 round 42% 58% 63% 37% / 45% 45% 55% 55%);
+    }
+    25% {
+        -webkit-clip-path: inset(0 round 62% 38% 42% 58% / 58% 46% 54% 42%);
+        clip-path: inset(0 round 62% 38% 42% 58% / 58% 46% 54% 42%);
+    }
+    50% {
+        -webkit-clip-path: inset(0 round 50% 50% 55% 45% / 40% 60% 40% 60%);
+        clip-path: inset(0 round 50% 50% 55% 45% / 40% 60% 40% 60%);
+    }
+    75% {
+        -webkit-clip-path: inset(0 round 44% 56% 48% 52% / 52% 42% 58% 48%);
+        clip-path: inset(0 round 44% 56% 48% 52% / 52% 42% 58% 48%);
+    }
 }
 
 @keyframes blob-spin {
@@ -122,6 +150,7 @@
 
 @media (prefers-reduced-motion: reduce) {
     .orb__blob-shape,
+    .orb__clip,
     .orb__spin,
     .orb__aurora,
     .orb__blob {
